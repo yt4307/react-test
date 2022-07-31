@@ -36,12 +36,8 @@ const postList = [
     },
 ];
 
-const getPostByNo = no => {
-    const array = postList.filter(post => {
-        console.log(post.no);
-
-        return post.no === no;
-    });
+const getPostByNo = ({ no }) => {
+    const array = postList.filter(post => post.no === Number(no));
     if (array.length === 1) {
         return array[0];
     }
