@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Main = styled.div`
@@ -8,7 +8,7 @@ const Main = styled.div`
 const Home = () => {
     return (
         <Main>
-            홈 입니다.
+            <Link to={"/board"}><button>게시판</button></Link>
         </Main>
     );
 };
